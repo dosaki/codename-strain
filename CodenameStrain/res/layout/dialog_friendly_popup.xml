@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/tv_fact_class"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/bt_attack"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_fact_class"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="19dp"
+        android:text=" Ok " />
+
+    <TextView
+        android:id="@+id/tv_attack_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bt_attack"
+        android:layout_marginTop="35dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt_attack"
+        android:layout_alignBottom="@+id/bt_attack"
+        android:layout_toRightOf="@+id/bt_attack"
+        android:text="Button" />
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<resources>
+
+    <string name="app_name">Codename Strain</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_login_screen">Codename Strain</string>
+    <string name="title_activity_map_menu">MapMenu</string>
+    <string name="title_activity_char_info">CharInfo</string>
+
+    <!-- Factions -->
+    <string-array name="fact_array">
+        <item>Human</item>
+        <item>Infected</item>
+    </string-array>
+
+    <!-- Human Class Names -->
+    <string-array name="humanclass_array">
+        <item>Soldier</item>
+        <item>Scientist</item>
+    </string-array>
+
+    <!-- Infected Class Names -->
+    <string-array name="infectedclass_array">
+        <item>Drone</item>
+        <item>Spitter</item>
+    </string-array>
+
+    <!-- Login Screen -->
+    <!-- Button Texts -->
+    <string name="button_login">Login</string>
+    <string name="button_logout">Logout</string>
+    <string name="button_register">Register</string>
+
+    <!-- Hints -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+
+    <!-- TextViews -->
+    <string name="text_first_time">First time?</string>
+
+    <!-- Register Screen -->
+    <!-- Hints -->
+    <string name="hint_regusername">Desired Username</string>
+    <string name="hint_regemail">Your Email</string>
+    <string name="hint_regpassword">Desired Password</string>
+
+    <!-- TextViews -->
+    <string name="text_fact_human_description">After the outburst of the virus, certain humans were tasked with clearing the world of the infection, to that end, they employ the latest technology in weaponry and armoury.</string>
+    <string name="text_fact_infected_description">The infected are hosts to a mysterious strain of virus, they seek to convert all living beings into tools for the High Overmind. An infected can gather different types of DNA sequences in order to improve themselves and defeat the Humans.</string>
+    <string name="text_class_hum_soldier">Fitted with special armour and weapons, Soldiers will use any means necessary to fight the infection.</string>
+    <string name="text_class_hum_scientist">Scientists use powerful tools allow them to support their fellow humans in combat by healing their wounds or prevent them from being infected.</string>
+    <string name="text_class_inf_drone">Drones are melee infected. They are strongly built and can shrug off a few bullets while delivering powerful melee strikes.</string>
+    <string name="text_class_inf_spitter">Spitters are ranged infected. They are weak to attacks but their poisonous darts allow them to deal considerable damage from a safe distance.</string>
+    <string name="text_soldier_subclass">Engineer: Can deploy Ammo Crates and Repairing Machines.\nBlack-Ops: Bonus range unable to use heavy armour, may disappear from the radar.</string>
+    <string name="text_scientist_subclass">Medic: Bonus healing, can set up Clinics (safehouses).\nInfection Control Officer: Access to ranged purging tools, more infection resistance.</string>
+    <string name="text_drone_subclass">Shifter: Can appear as a human and is able to use some human weapons.\nHunter: More health, damage, damage mitigation. Ability to use Heavy DNA mutagens.</string>
+    <string name="text_spitter_subclass">Queen Spitter: Bonus poison damage, can set up Hatcheries (safehouses).\nSovereign Mind: Boosts nearby infected stats and is able to deploy small dartlings.</string>
+    <string name="text_soldier_ppty">Weapons: Any\nTools: None\nEquipment:Medium, Heavy</string>
+    <string name="text_scientist_ppty">Weapons: Small\nTools: Medicine, Purging\nEquipment:Light, Hazmat</string>
+    <string name="text_drone_ppty">Combat: Melee\nBody:Medium\nBonus: Resistant to Purge Attempts</string>
+    <string name="text_spitter_ppty">Combat: Ranged\nBody:Light\nBonus: DNA Gatherer</string>
+    <string name="text_restrictions">Properties:</string>
+    <string name="text_base_stats">Base Stats:</string>
+    <string name="text_subclass">Subclasses:</string>
+    <string name="text_substrain">Substrains:</string>
+
+    <!-- Map/Menu -->
+    <!-- Button Texts -->
+    <!-- <string name="button_notifications">Notif</string> -->
+    <string name="button_bag">Bag</string>
+    <string name="button_charinfo">Character</string>
+    <string name="button_menu">Mail</string>
+    <string name="button_dismissall">Dismiss All</string>
+
+    <!-- Character Info -->
+    <!-- TextViews -->
+    <string name="text_stats">Stats:</string>
+    <string name="text_str">STR</string>
+    <string name="text_acc">ACC</string>
+    <string name="text_sta">STA</string>
+    <string name="text_per">PER</string>
+    <string name="text_info">i</string>
+    <string name="text_available_points">Available Points:</string>
+    <string name="text_description">Description</string>
+
+    <!-- Stat Descriptions -->
+    <string name="text_str_descript">Strength increases the damage for melee attacks. Each weapon may benefit differently from this stat.</string>
+    <string name="text_acc_descript">Accuracy increases the damage and range for ranged attacks. Each weapon may benefit differently from this stat.</string>
+    <string name="text_sta_descript">Stamina determines your health and influences your defense.</string>
+    <string name="text_per_descript">Perception determines how far you can see things in your map. It influences your range and defense.</string>
+
+    <!-- Button Texts -->
+    <string name="button_accept">Accept</string>
+
+    <!-- Player Popup Dialog -->
+    <!-- Button Texts -->
+    <string name="button_attack">Attack</string>
+    <string name="button_ok">OK</string>
+    <string name="feedback_positive_kill">The enemy took %s damage and died.</string>
+    <string name="feedback_positive">The enemy took %s damage.</string>
+    <string name="feedback_negative_kill">You took %s damage and died.</string>
+    <string name="feedback_negative">You took %s damage.</string>
+    <string name="feedback_tie">The enemy didn\'t even feel a thing.</string>
+    <string name="feedback_toofar">You are too far away.</string>
+
+    <!-- Mail -->
+    <!-- Buttons -->
+    <string name="button_delete">Delete</string>
+    <string name="button_new">New Mail</string>
+    <string name="button_getitem">Get Item</string>
+    <string name="button_refresh">Refresh</string>
+    <string name="button_mailcancel">Cancel</string>
+    <string name="button_mailsend">Send</string>
+    <string name="button_attachitem">Attach</string>
+
+    <!-- Hints -->
+    <string name="hint_newmail">Write a new mail</string>
+    <string name="hint_recipient">Recipient</string>
+
+    <!-- Text -->
+    <string name="text_mailempty">Nothing to display.</string>
+    <string name="text_to"> To: </string>
+    <string name="text_sendingerror_username">Player does not exist.</string>
+    <string name="text_sendingerror_mailbox">Player\'s mailbox is full.</string>
+    <string name="text_sendingok">Mail sent!</string>
+    <string name="text_fullinventory">Inventory is full.</string>
+
+    
+    <!-- Bag -->
+    <!-- Buttons -->
+    <string name="button_delete_item">Delete</string>
+    <string name="button_next">Next Page</string>
+    <string name="button_send">Send</string>
+    
+    
+    
+    <!-- Error Messages -->
+    <string name="error_login">Wrong login info.</string>
+
+    <!-- Feedback Messages -->
+    <string name="feedback_login_success">Success! Welcome </string>
+    <string name="title_activity_register_screen">RegisterScreen</string>
+    <string name="title_activity_mail">Mail</string>
+    <string name="title_activity_mail_menu">MailMenu</string>
+    <string name="title_activity_mail_send">MailSend</string>
+    <string name="title_activity_bag_menu">BagMenu</string>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <com.google.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="0lu8WUgL-JBKqSxMBd98PkTlEJhG0AFYBqJn4BA"
+        android:clickable="true" >
+    </com.google.android.maps.MapView>
+
+    <Button
+        android:id="@+id/bt_menu"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mapview"
+        android:layout_alignTop="@+id/mapview"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/bt_map"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mapview"
+        android:layout_below="@+id/bt_menu"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/bt_charinfo"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mapview"
+        android:layout_below="@+id/bt_map"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/bt_bag"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mapview"
+        android:layout_below="@+id/bt_charinfo"
+        android:text="Button" />
+
+</RelativeLayout>
