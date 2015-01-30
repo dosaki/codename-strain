@@ -1,4 +1,4 @@
-# codename-strain
+# Codename: Strain
 
 I developed this game as my final project for my Bachelor's in Software Engineering. It was done in 2012 and I haven't picked it up since then... maybe I should change that!
 
