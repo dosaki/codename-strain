@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_touser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/text_to"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/Huge" />
+
+            <EditText
+                android:id="@+id/et_gifted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:ems="10"
+                android:hint="@string/hint_recipient" >
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_sending_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/bt_sendItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/button_send" />
+        
+</LinearLayout>

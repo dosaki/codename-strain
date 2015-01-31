@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/bt_menu"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/button_menu" />
+
+        <Button
+            android:id="@+id/bt_charinfo"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/button_charinfo" />
+
+        <Button
+            android:id="@+id/bt_bag"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/button_bag" />
+
+        <Button
+            android:id="@+id/bt_map"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:drawable/bottom_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="1000"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff000000" />
+        
+        <ImageButton
+            android:id="@+id/bt_pulse"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.2"
+            android:src="@android:drawable/btn_radio" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:background="@android:drawable/bottom_bar"
+        android:gravity="center_vertical" >
+
+        <com.google.android.maps.MapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="395dp"
+            android:apiKey="0lu8WUgL-JBKqSxMBd98PkTlEJhG0AFYBqJn4BA"
+            android:clickable="true" >
+        </com.google.android.maps.MapView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+/*
+ * Copyright (c) Tiago 'Dosaki' Correia 2015
+ */
+
+include ':app'

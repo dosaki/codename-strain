@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Tiago 'Dosaki' Correia 2015
+  -->
+
+<resources>
+
+    <string name="app_name">codename_strain</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

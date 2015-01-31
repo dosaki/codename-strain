@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <EditText
+        android:id="@+id/tf_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:autoText="false"
+        android:editable="true"
+        android:textColor="#ffffff"/>
+
+    <EditText
+        android:id="@+id/tf_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tf_login"
+        android:layout_alignRight="@+id/tf_login"
+        android:layout_below="@+id/tf_login"
+        android:ems="10"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:editable="true"
+        android:textColor="#ffffff">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/button_login"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_loginfeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_firsttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_login"
+        android:layout_marginTop="66dp"
+        android:layout_toLeftOf="@+id/tv_loginfeedback"
+        android:text="@string/text_first_time"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/bt_register"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_firsttime"
+        android:layout_alignBottom="@+id/tv_firsttime"
+        android:layout_toRightOf="@+id/tv_loginfeedback"
+        android:text="@string/button_register"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>
