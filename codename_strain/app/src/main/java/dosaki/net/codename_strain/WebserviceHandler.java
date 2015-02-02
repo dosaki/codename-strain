@@ -19,116 +19,115 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class WebserviceHandler {
-	
+
 	private static final String NAMESPACE = "http://tempuri.org/";
     private static final String URL = "http://192.168.1.5/StrainServer/Service.asmx";
-    
+
 	private static final String ACTION_GETSTATS = "http://tempuri.org/getPlayerStatsById";
     private static final String WEBMETHOD_GETSTATS = "getPlayerStatsById";
-    
+
     private static final String ACTION_GETCLASSNAME = "http://tempuri.org/getPlayerClassNameById";
     private static final String WEBMETHOD_GETCLASSNAME = "getPlayerClassNameById";
-    
+
     private static final String SOAP_ACTION = "http://tempuri.org/authenticate";
     private static final String METHOD_NAME = "authenticate";
-    
+
     private static final String ACTION_GETCLASSARMORS = "http://tempuri.org/getClassAllowedArmorById";
     private static final String WEBMETHOD_GETCLASSARMORS = "getClassAllowedArmorById";
-    
+
     private static final String ACTION_GETCLASSWEAPONS = "http://tempuri.org/getClassAllowedWeaponTypesById";
     private static final String WEBMETHOD_GETCLASSWEAPONS = "getClassAllowedWeaponTypesById";
-    
+
     private static final String ACTION_GETACTIVEPLAYER = "http://tempuri.org/getActiveCharacterIdByUsername";
     private static final String WEBMETHOD_GETACTIVEPLAYER = "getActiveCharacterIdByUsername";
-    
+
     private static final String ACTION_GETALLTHESTOREDITEMS = "http://tempuri.org/getAllStoredItemInstancesById";
     private static final String WEBMETHOD_GETALLTHESTOREDITEMS= "getAllStoredItemInstancesById";
-    
+
     private static final String ACTION_GETMAILBOX = "http://tempuri.org/getPlayerMailbox";
     private static final String WEBMETHOD_GETMAILBOX= "getPlayerMailbox";
-    
+
     private static final String ACTION_GETMAILTEXT = "http://tempuri.org/getItemInstanceFlavorById";
     private static final String WEBMETHOD_GETMAILTEXT = "getItemInstanceFlavorById";
-    
+
     private static final String ACTION_GETINVENTORY = "http://tempuri.org/getPlayerInventory";
     private static final String WEBMETHOD_GETINVENTORY = "getPlayerInventory";
-    
+
     private static final String ACTION_CHANGESTORAGE = "http://tempuri.org/getItemInstanceFlavorById";
     private static final String WEBMETHOD_CHANGESTORAGE = "getItemInstanceFlavorById";
-    
+
     private static final String ACTION_GETITEMNAME = "http://tempuri.org/getItemInstanceItemNameById";
     private static final String WEBMETHOD_GETITEMNAME = "getItemInstanceItemNameById";
-    
+
     private static final String ACTION_GETHEALTH = "http://tempuri.org/getPlayerHealthById";
     private static final String WEBMETHOD_GETHEALTH = "getPlayerHealthById";
-    
+
     private static final String ACTION_UPDATELOCATION = "http://tempuri.org/updateLocation";
     private static final String WEBMETHOD_UPDATELOCATION = "updateLocation";
-    
+
     private static final String ACTION_GETNEARBYHUMANS = "http://tempuri.org/getNearbyHumanPlayersPostion";
     private static final String WEBMETHOD_GETNEARBYHUMANS= "getNearbyHumanPlayersPostion";
-    
+
     private static final String ACTION_GETNEARBYINFECTED = "http://tempuri.org/getNearbyInfectedPlayersPostion";
     private static final String WEBMETHOD_GETNEARBYINFECTED= "getNearbyInfectedPlayersPostion";
-    
+
     private static final String ACTION_GOONLINE = "http://tempuri.org/goOnline";
     private static final String WEBMETHOD_GOONLINE= "goOnline";
-    
+
     private static final String ACTION_GOOFFLINE = "http://tempuri.org/goOffline";
     private static final String WEBMETHOD_GOOFFLINE= "goOffline";
-    
+
     private static final String ACTION_GETPERCEPTION = "http://tempuri.org/getPlayerPerById";
     private static final String WEBMETHOD_GETPERCEPTION= "getPlayerPerById";
-    
+
     private static final String ACTION_GETPLAYERUSERNAME = "http://tempuri.org/getUsernameByPlayerID";
     private static final String WEBMETHOD_GETPLAYERUSERNAME= "getUsernameByPlayerID";
-    
+
     private static final String ACTION_GETMAXHEALTH = "http://tempuri.org/getPlayerMaxHealthById";
     private static final String WEBMETHOD_GETMAXHEALTH = "getPlayerMaxHealthById";
-    
+
     private static final String ACTION_STRIKERANGED = "http://tempuri.org/strikeRanged";
     private static final String WEBMETHOD_STRIKERANGED = "strikeRanged";
-    
+
     private static final String ACTION_ISINRANGE = "http://tempuri.org/isInRange";
     private static final String WEBMETHOD_ISINRANGE = "isInRange";
-    
+
 	private static final String ACTION_REGISTER = "http://tempuri.org/register";
     private static final String WEBMETHOD_REGISTER = "register";
-    
+
     private static final String ACTION_GETBASESTATS = "http://tempuri.org/getClassBaseStatsById";
     private static final String WEBMETHOD_GETBASESTATS = "getClassBaseStatsById";
-    
+
     private static final String ACTION_GETITEMCREATOR = "http://tempuri.org/getItemInstanceOwnerById";
     private static final String WEBMETHOD_GETITEMCREATOR = "getItemInstanceOwnerById";
-    
+
     private static final String ACTION_GETUSERID = "http://tempuri.org/getUserIdByUsername";
     private static final String WEBMETHOD_GETUSERID= "getUserIdByUsername";
-    
+
     private static final String ACTION_SENDMAIL = "http://tempuri.org/newMailItem";
     private static final String WEBMETHOD_SENDMAIL = "newMailItem";
-    
+
     private static final String ACTION_GETALLTHENOTIFICATIONS = "http://tempuri.org/getAllTheNotificationsForUser";
     private static final String WEBMETHOD_GETALLTHENOTIFICATIONS = "getAllTheNotificationsForUser";
-    
+
     private static final String ACTION_GETUSERNAMEBYEMAIL = "http://tempuri.org/getUsernameByEmail";
     private static final String WEBMETHOD_GETUSERNAMEBYEMAIL= "getUsernameByEmail";
-    
+
     private static final String ACTION_DISMISSNOTIFICATION = "http://tempuri.org/getAllTheNotificationsForUser";
     private static final String WEBMETHOD_DISMISSNOTIFICATION = "getAllTheNotificationsForUser";
-    
+
     private static final String ACTION_CLEARNOTIFICATIONS = "http://tempuri.org/clearNotificationsForUser";
     private static final String WEBMETHOD_CLEARNOTIFICATIONS = "clearNotificationsForUser";
-    
+
     private static final String ACTION_GETSTORAGESIZE = "http://tempuri.org/getStorageMaxCapacityById";
     private static final String WEBMETHOD_GETSTORAGESIZE = "getStorageMaxCapacityById";
-    
+
     private static final String ACTION_DELETEITEM = "http://tempuri.org/deleteItem";
     private static final String WEBMETHOD_DELETEITEM = "deleteItem";
-    
-    
-    
-    public String auth(String email, String password)
-    {
+
+
+
+    public String auth(String email, String password){
     	SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
         
         PropertyInfo ppty_email = new PropertyInfo();
@@ -151,15 +150,15 @@ public class WebserviceHandler {
 	        Object result = envelope.getResponse();
 	        return result.toString();
 	        
-		} catch (Exception e) {
+		}
+        catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return "false";
 		}
     }
     	
-    public String getUsernameFromEmail(String email)
-    {
+    public String getUsernameFromEmail(String email){
     	SoapObject requestUsername = new SoapObject(NAMESPACE, WEBMETHOD_GETUSERNAMEBYEMAIL);
 	    
 			PropertyInfo ppty_email2 = new PropertyInfo();
@@ -179,14 +178,12 @@ public class WebserviceHandler {
 	           Object responseUsername = envelopeUsername.getResponse();
 	           return responseUsername.toString();
            }
-           catch(Exception e)
-           {
+           catch(Exception e){
         	   return "";
            }
     }
     
-	public ArrayList<String> getStatList(String playerID)
-	{
+	public ArrayList<String> getStatList(String playerID){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETSTATS);
         
         PropertyInfo ppty_playerid = new PropertyInfo();
@@ -214,15 +211,13 @@ public class WebserviceHandler {
             
             return statList;
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    }
 	    return null;
 	}
 
-    public ArrayList<String> getAllTheMailFrom(String storage_id)
-    {
+    public ArrayList<String> getAllTheMailFrom(String storage_id){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETALLTHESTOREDITEMS);
         
         PropertyInfo ppty_storageid = new PropertyInfo();
@@ -240,12 +235,10 @@ public class WebserviceHandler {
 	
 	        SoapObject result = (SoapObject) envelope.getResponse(); 
 	        
-	        if(result.toString().equals(""))
-	        {
+	        if(result.toString().equals("")){
 	        	return null;
 	        }
-	        else
-	        {
+	        else{
 	            int childCount = result.getPropertyCount();
 	            ArrayList<String> mailItemList = new ArrayList<String>();
 	            
@@ -257,15 +250,13 @@ public class WebserviceHandler {
 	            return mailItemList;
 	        }
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    }
 	    return null;
     }
     
-	public String getMailbox(String player_id)
-    {
+	public String getMailbox(String player_id){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETMAILBOX);
         
         PropertyInfo ppty_playerid = new PropertyInfo();
@@ -285,15 +276,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
     }
 	
-	public String getInventory(String player_id)
-    {
+	public String getInventory(String player_id){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETINVENTORY);
         
         PropertyInfo ppty_playerid = new PropertyInfo();
@@ -313,15 +302,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
     }
 		
-	public String getMailText(String itemInstance_id)
-	{
+	public String getMailText(String itemInstance_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETMAILTEXT);
         
         PropertyInfo ppty_itinst_id = new PropertyInfo();
@@ -341,15 +328,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 		
-	public String putItemInStorage(String itemInstance_id, String storage_id)
-	{
+	public String putItemInStorage(String itemInstance_id, String storage_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CHANGESTORAGE);
         
         PropertyInfo ppty_itinst_id = new PropertyInfo();
@@ -379,15 +364,13 @@ public class WebserviceHandler {
 	        else
 	        	return "error";
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 	
-	public String getItemName(String itemInstance_id)
-	{
+	public String getItemName(String itemInstance_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETITEMNAME);
         
         PropertyInfo ppty_itinst_id = new PropertyInfo();
@@ -407,15 +390,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 	
-	public String getPlayerMaxHealth(String player_id)
-	{
+	public String getPlayerMaxHealth(String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETMAXHEALTH);
 		
         PropertyInfo ppty_playerid= new PropertyInfo();
@@ -435,15 +416,13 @@ public class WebserviceHandler {
 	        Object result = envelope.getResponse();
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println(":" + e);
         	return ":" + e.toString();
         }
 	}
 	
-	public String getActivePlayer(String username)
-    {
+	public String getActivePlayer(String username){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETACTIVEPLAYER);
         
         PropertyInfo ppty_username = new PropertyInfo();
@@ -463,15 +442,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
     }
 	
-	public String getUsername(String player_id)
-	{
+	public String getUsername(String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETPLAYERUSERNAME);
         
         PropertyInfo ppty_playerid = new PropertyInfo();
@@ -491,15 +468,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 	
-	public String getPlayerPer(String player_id)
-	{
+	public String getPlayerPer(String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETPERCEPTION);
         
 		PropertyInfo ppty_playerid= new PropertyInfo();
@@ -519,15 +494,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 	
-	public void updateLocation(String location, String player_id)
-	{
+	public void updateLocation(String location, String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_UPDATELOCATION);
 		
         PropertyInfo ppty_playerid= new PropertyInfo();
@@ -550,14 +523,12 @@ public class WebserviceHandler {
 
 	        System.out.println("Done");
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         }
 	}
 	
-	public ArrayList<String> getNearbyHumanPlayers(String coordinates, String baseRadius, String bonus)
-	{
+	public ArrayList<String> getNearbyHumanPlayers(String coordinates, String baseRadius, String bonus){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETNEARBYHUMANS);
         
         PropertyInfo ppty_coordinates = new PropertyInfo();
@@ -595,8 +566,7 @@ public class WebserviceHandler {
             
             return playerList;
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    }
 	    return null;
@@ -641,15 +611,13 @@ public class WebserviceHandler {
             
             return playerList;
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    }
 	    return null;
 	}
 	
-	public String getClassname(String playerid)
-	{
+	public String getClassname(String playerid){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETCLASSNAME);
         
         PropertyInfo ppty_playerid = new PropertyInfo();
@@ -668,15 +636,13 @@ public class WebserviceHandler {
 	        Object result = envelope.getResponse();
 	        return result.toString();
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    	return e.toString();
 	    }
 	}
 	
-	public void goOnline(String player_id)
-	{
+	public void goOnline(String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GOONLINE);
 		
         PropertyInfo ppty_playerid= new PropertyInfo();
@@ -694,14 +660,12 @@ public class WebserviceHandler {
 
 	        System.out.println("Done");
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println(":" + e);
         }
 	}
 	
-	public void goOffline(String player_id)
-	{
+	public void goOffline(String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GOOFFLINE);
 		
         PropertyInfo ppty_playerid= new PropertyInfo();
@@ -719,14 +683,12 @@ public class WebserviceHandler {
 
 	        System.out.println("Done");
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println(":" + e);
         }
 	}
 	
-	public String getPlayerHealth(String player_id)
-	{
+	public String getPlayerHealth(String player_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETHEALTH);
 		
         PropertyInfo ppty_playerid= new PropertyInfo();
@@ -746,15 +708,13 @@ public class WebserviceHandler {
 	        Object result = envelope.getResponse();
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println(":" + e);
         	return ":" + e.toString();
         }
 	}
 	
-	public String isInRange(String victim_id, String attacker_id)
-    {
+	public String isInRange(String victim_id, String attacker_id){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_ISINRANGE);
         
         PropertyInfo ppty_victim = new PropertyInfo();
@@ -779,15 +739,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
     }
 	
-	public String strikeRanged(String victim_user, String attacker_id)
-	{
+	public String strikeRanged(String victim_user, String attacker_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_STRIKERANGED);		
 		
 		PropertyInfo ppty_preyid = new PropertyInfo();
@@ -812,20 +770,17 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 	
-	public WebserviceHandler()
-	{
+	public WebserviceHandler(){
 		
 	}
 
-	public String getUserId(String username)
-    {
+	public String getUserId(String username){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETUSERID);
         
         PropertyInfo ppty_username = new PropertyInfo();
@@ -845,15 +800,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
     }
 
-	public String registerUser(String user, String email, String password, String faction, String playerClass, String position)
-	{
+	public String registerUser(String user, String email, String password, String faction, String playerClass, String position){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_REGISTER);
 		
         PropertyInfo ppty_user= new PropertyInfo();
@@ -898,15 +851,13 @@ public class WebserviceHandler {
 
 	        return "true";
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("RegisterError: " + e);
         	return "";
         }
 	}
 
-	public ArrayList<String> getBaseStatList(String class_id)
-	{
+	public ArrayList<String> getBaseStatList(String class_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETBASESTATS);
         
         PropertyInfo ppty_playerid = new PropertyInfo();
@@ -934,15 +885,13 @@ public class WebserviceHandler {
             
             return statList;
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    }
-	    return null;
+	    return new ArrayList();
 	}
 
-	public String getItemCreator(String itemInstance_id)
-	{
+	public String getItemCreator(String itemInstance_id){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETITEMCREATOR);
         
         PropertyInfo ppty_itinst_id = new PropertyInfo();
@@ -962,21 +911,18 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 	
-	public String getItemCreatorName(String itemInstance_id)
-	{
+	public String getItemCreatorName(String itemInstance_id){
 		String testing = getUsername(getItemCreator(itemInstance_id));
 		return testing;
 	}
 	
-	public String sendMail(String sender_id, String recipient_username, String message)
-	{
+	public String sendMail(String sender_id, String recipient_username, String message){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_SENDMAIL);
         
         PropertyInfo ppty_sender_id = new PropertyInfo();
@@ -1006,15 +952,13 @@ public class WebserviceHandler {
 
 	        return result.toString();
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println("PlayerError: " + e);
         	return e.toString();
         }
 	}
 
-	public ArrayList<String> getAllTheNotifications(String username)
-	{
+	public ArrayList<String> getAllTheNotifications(String username){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETALLTHENOTIFICATIONS);
         
         PropertyInfo ppty_username = new PropertyInfo();
@@ -1042,15 +986,13 @@ public class WebserviceHandler {
             
             return notifList;
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    	return null;
 	    }
 	}
 
-	public void dismissNotification(String username, String message)
-	{
+	public void dismissNotification(String username, String message){
 		SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_DISMISSNOTIFICATION);
 		
         PropertyInfo ppty_username= new PropertyInfo();
@@ -1073,15 +1015,13 @@ public class WebserviceHandler {
 
 	        System.out.println("Done");
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println(":" + e);
         }
 	}
 
-	public void dismissAllTheNotifications(String username)
-	{
-SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
+	public void dismissAllTheNotifications(String username){
+        SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
 		
         PropertyInfo ppty_username= new PropertyInfo();
         ppty_username.setName("username");
@@ -1098,14 +1038,12 @@ SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
 
 	        System.out.println("Done");
         }
-        catch(Exception e)
-        {
+        catch(Exception e){
         	System.err.println(":" + e);
         }
 	}
 
-	public ArrayList<String> getAllTheBaggedItems(String storage_id)
-    {
+	public ArrayList<String> getAllTheBaggedItems(String storage_id){
     	SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_GETALLTHESTOREDITEMS);
         
         PropertyInfo ppty_storageid = new PropertyInfo();
@@ -1123,12 +1061,10 @@ SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
 	
 	        SoapObject result = (SoapObject) envelope.getResponse(); 
 	        
-	        if(result.toString().equals(""))
-	        {
+	        if(result.toString().equals("")){
 	        	return null;
 	        }
-	        else
-	        {
+	        else{
 	            int childCount = result.getPropertyCount();
 	            ArrayList<String> mailItemList = new ArrayList<String>();
 	            
@@ -1140,15 +1076,13 @@ SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
 	            return mailItemList;
 	        }
 	    }
-	    catch(Exception e)
-	    {
+	    catch(Exception e){
 	    	System.err.println("ClassError: " + e);
 	    }
 	    return null;
     }
     
-	public String getStorageMaxCapacity(String storage_id)
-	{
+	public String getStorageMaxCapacity(String storage_id){
 		SoapObject requestUsername = new SoapObject(NAMESPACE, WEBMETHOD_GETSTORAGESIZE);
 	    
 		PropertyInfo ppty_storageid = new PropertyInfo();
@@ -1169,14 +1103,12 @@ SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
            return cap.toString();
            
        }
-       catch(Exception e)
-       {
+       catch(Exception e){
     	   return "";
        }
 	}
 	
-	public String deleteItem(String itemInst_id, String storage_id)
-	{
+	public String deleteItem(String itemInst_id, String storage_id){
 		SoapObject requestUsername = new SoapObject(NAMESPACE, WEBMETHOD_DELETEITEM);
 	    
 		PropertyInfo ppty_itemInst = new PropertyInfo();
@@ -1202,8 +1134,7 @@ SoapObject request = new SoapObject(NAMESPACE, WEBMETHOD_CLEARNOTIFICATIONS);
            return cap.toString();
            
        }
-       catch(Exception e)
-       {
+       catch(Exception e){
     	   return "";
        }
 	}

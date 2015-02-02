@@ -58,6 +58,8 @@ public class RegisterScreen extends Activity {
 	private LocationListener myLocationListener;
 	
 	private WebserviceHandler service;
+
+    StrainService strainService;
 	
     
     
@@ -93,17 +95,17 @@ public class RegisterScreen extends Activity {
     	
     }
     
-    private ArrayList<String> getBaseStatList(String class_id)
-	{
-		return service.getBaseStatList(class_id);
+    private ArrayList<String> getBaseStatList(String className){
+		return strainService.getBaseStatList(className);
 	}
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_screen);
-        
+
         service = new WebserviceHandler();
+        strainService = new StrainService();
         
         username = (EditText)findViewById(R.id.tf_regusername);
         password = (EditText)findViewById(R.id.tf_regpassword);
@@ -135,15 +137,13 @@ public class RegisterScreen extends Activity {
         final ArrayAdapter<CharSequence> infectedClassAdapter = ArrayAdapter.createFromResource(this, R.array.infectedclass_array, android.R.layout.simple_spinner_item);
         infectedClassAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         
-        ArrayAdapter<CharSequence> factionAdapter = ArrayAdapter.createFromResource(this,
-                R.array.fact_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> factionAdapter = ArrayAdapter.createFromResource(this, R.array.fact_array, android.R.layout.simple_spinner_item);
         factionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spFactionChooser.setAdapter(factionAdapter);
         
         spFactionChooser.setOnItemSelectedListener(new OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-    			if(pos == 0)
-    			{
+    			if(pos == 0){
     		        spClassChooser.setAdapter(humanClassAdapter);
     		        spClassChooser.setEnabled(true);
     		        tvFactionDescription.setText(R.string.text_fact_human_description);
@@ -151,44 +151,32 @@ public class RegisterScreen extends Activity {
     		        factionChoice = "fact_hum";
     		        spClassChooser.setOnItemSelectedListener(new OnItemSelectedListener() {
     		        	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-    		        		if(pos == 0)
-    		        		{
-    		        			baseStatList = new ArrayList<String>(getBaseStatList("h_soldier"));
-    		        			classChoice = "h_soldier";
-    		        			tvClassDescription.setText(R.string.text_class_hum_soldier);
-    		        			tvSubclassesDescript.setText(R.string.text_soldier_subclass);
-    		        			tvRestrictions.setText(R.string.text_soldier_ppty);
-    		        			
-    		        			if(baseStatList.isEmpty())
-    		        				tvStrVal.setText(".");
-    		        			else
-    		        			{
-	    		        			tvStrVal.setText(baseStatList.get(0));
-	    		        			tvAccVal.setText(baseStatList.get(1));
-	    		        			tvStaVal.setText(baseStatList.get(2));
-	    		        			tvPerVal.setText(baseStatList.get(3));
-    		        			}
-    		        			
-    		        			
+    		        		if(pos == 0) {
+                                classChoice = "Soldier";
+                                tvClassDescription.setText(R.string.text_class_hum_soldier);
+                                tvSubclassesDescript.setText(R.string.text_soldier_subclass);
+                                tvRestrictions.setText(R.string.text_soldier_ppty);
     		        		}
-    		        		else if(pos == 1)
-    		        		{
-    		        			baseStatList = new ArrayList<String>(getBaseStatList("h_science"));
-    		        			classChoice = "h_science";
+    		        		else if(pos == 1){
+                                classChoice = "Scientist";
     		        			tvClassDescription.setText(R.string.text_class_hum_scientist);
     		        			tvSubclassesDescript.setText(R.string.text_scientist_subclass);
     		        			tvRestrictions.setText(R.string.text_scientist_ppty);
-    		        			
-    		        			if(baseStatList.isEmpty())
-    		        				tvStrVal.setText(".");
-    		        			else
-    		        			{
-	    		        			tvStrVal.setText(baseStatList.get(0));
-	    		        			tvAccVal.setText(baseStatList.get(1));
-	    		        			tvStaVal.setText(baseStatList.get(2));
-	    		        			tvPerVal.setText(baseStatList.get(3));
-    		        			}
     		        		}
+
+                            baseStatList = getBaseStatList(classChoice);
+                            if (baseStatList != null && !baseStatList.isEmpty()){
+                                tvStrVal.setText(baseStatList.get(0));
+                                tvAccVal.setText(baseStatList.get(1));
+                                tvStaVal.setText(baseStatList.get(2));
+                                tvPerVal.setText(baseStatList.get(3));
+                            }
+                            else{
+                                tvStrVal.setText("0");
+                                tvAccVal.setText("0");
+                                tvStaVal.setText("0");
+                                tvPerVal.setText("0");
+                            }
     		        	}
 
 						public void onNothingSelected(AdapterView<?> arg0) {
@@ -198,8 +186,7 @@ public class RegisterScreen extends Activity {
 					});
     		        
     			}
-    			else if(pos == 1)
-    			{
+    			else if(pos == 1){
     		        spClassChooser.setAdapter(infectedClassAdapter);
     		        spClassChooser.setEnabled(true);
     		        tvFactionDescription.setText(R.string.text_fact_infected_description);
@@ -207,41 +194,32 @@ public class RegisterScreen extends Activity {
     		        factionChoice = "fact_inf";
     		        spClassChooser.setOnItemSelectedListener(new OnItemSelectedListener() {
     		        	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-    		        		if(pos == 0)
-    		        		{
-    		        			baseStatList = new ArrayList<String>(getBaseStatList("i_drone"));
-    		        			classChoice = "i_drone";
+    		        		if(pos == 0){
+                                classChoice = "Drone";
     		        			tvClassDescription.setText(R.string.text_class_inf_drone);
     		        			tvSubclassesDescript.setText(R.string.text_drone_subclass);
     		        			tvRestrictions.setText(R.string.text_drone_ppty);
-    		        			
-    		        			if(baseStatList.isEmpty())
-    		        				tvStrVal.setText(".");
-    		        			else
-    		        			{
-	    		        			tvStrVal.setText(baseStatList.get(0));
-	    		        			tvAccVal.setText(baseStatList.get(1));
-	    		        			tvStaVal.setText(baseStatList.get(2));
-	    		        			tvPerVal.setText(baseStatList.get(3));
-    		        			}
     		        		}
-    		        		else if(pos == 1)
-    		        		{
-    		        			baseStatList = new ArrayList<String>(getBaseStatList("i_spitter"));
-    		        			classChoice = "i_spitter";
+    		        		else if(pos == 1){
+                                classChoice = "Spitter";
     		        			tvClassDescription.setText(R.string.text_class_inf_spitter);
     		        			tvSubclassesDescript.setText(R.string.text_spitter_subclass);
     		        			tvRestrictions.setText(R.string.text_spitter_ppty);
-    		        			if(baseStatList.isEmpty())
-    		        				tvStrVal.setText(".");
-    		        			else
-    		        			{
-	    		        			tvStrVal.setText(baseStatList.get(0));
-	    		        			tvAccVal.setText(baseStatList.get(1));
-	    		        			tvStaVal.setText(baseStatList.get(2));
-	    		        			tvPerVal.setText(baseStatList.get(3));
-    		        			}
     		        		}
+
+                            baseStatList = getBaseStatList(classChoice);
+                            if (baseStatList != null && !baseStatList.isEmpty()){
+                                tvStrVal.setText(baseStatList.get(0));
+                                tvAccVal.setText(baseStatList.get(1));
+                                tvStaVal.setText(baseStatList.get(2));
+                                tvPerVal.setText(baseStatList.get(3));
+                            }
+                            else{
+                                tvStrVal.setText("0");
+                                tvAccVal.setText("0");
+                                tvStaVal.setText("0");
+                                tvPerVal.setText("0");
+                            }
     		        	}
 
 						public void onNothingSelected(AdapterView<?> arg0) {

@@ -80,8 +80,11 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 15 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="javax.json-1.0" level="project" />
     <orderEntry type="library" exported="" name="ksoap2-android-assembly-2.6.5-jar-with-dependencies" level="project" />
     <orderEntry type="library" exported="" name="android-support-v4" level="project" />
+    <orderEntry type="library" exported="" name="android-google-maps-api13" level="project" />
+    <orderEntry type="library" exported="" name="servlet-api" level="project" />
   </component>
 </module>
 
